@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit message</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Edit message</h1>
+    <br/>
+    <h3><%= editchat.from %></h3>
+    <form method="post" action="/chats/<%= editchat._id %>?_method=PUT">
+        <input placeholder="insert your image if you want to change" name="image"><br> 
+        <textarea name="message"><%= editchat.message %></textarea>
+        <br/><br/>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
